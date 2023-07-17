@@ -1,0 +1,22 @@
+<%= link_to "Items", '/items' %>
+<%= link_to "Merchants", '/merchants' %>
+
+<h2>Edit <%=link_to @merchant.name, "/merchants/#{@merchant.id}" %></h2>
+<%= form_with url: "/merchants/#{@merchant.id}", method: :patch do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name, "#{@merchant.name}"%>
+
+  <%= form.label :address %>
+  <%= form.text_field :address, "#{@merchant.address}" %>
+
+  <%= form.label :city %>
+  <%= form.text_field :city, "#{@merchant.city}" %>
+
+  <%= form.label :state %>
+  <%= form.text_field :state, "#{@merchant.state}" %>
+
+  <%= form.label :zip %>
+  <%= form.text_field :zip,"#{@merchant.zip}" %>
+
+  <%= form.submit 'Update Merchant' %>
+<% end %>

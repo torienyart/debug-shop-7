@@ -1,0 +1,15 @@
+<%= link_to "Items", '/items' %>
+<%= link_to "Merchants", '/merchants' %>
+
+<h1> Item info</h1>
+
+<ul><%= @item.name %></ul>
+
+<ul><%= @item.description %></ul>
+<ul><%= @item.price %></ul>
+<ul><%= @item.active_inactive %></ul>
+<ul><%= @item.inventory %></ul>
+<ul><%= link_to @item.merchant.name, "/merchants/#{@item.merchant.id}"%></ul>
+<ul><img src= <%= @item.image %>></ul>
+
+<%= link_to "Edit Item", "/items/#{@item.id}/edit"%>

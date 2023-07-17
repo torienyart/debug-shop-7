@@ -1,0 +1,11 @@
+<%= link_to "Items", '/items' %>
+<%= link_to "Merchants", '/merchants' %>
+<h1><%= @merchant.name  %></h1>
+
+<p><%= @merchant.address %></p>
+<p><%= @merchant.city %></p>
+<p><%= @merchant.state %></p>
+<p><%= @merchant.zip %></p>
+
+<%= link_to "Update Info", "/merchants/#{@merchant.id}/edit"%>
+<%= link_to "Delete Merchant", "/merchants/#{@merchant.id}" %>

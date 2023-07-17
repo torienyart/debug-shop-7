@@ -1,0 +1,22 @@
+<%= link_to "Items", '/items' %>
+<%= link_to "Merchants", '/merchants' %>
+
+<h2><%=link_to @merchant.name, "/merchants/#{@merchant.id}"%>, Create a New Item</h2>
+<%= form_with url: "/merchants/#{@merchant.id}/items" do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :description %>
+  <%= form.text_field :description %>
+
+  <%= form.label :price %>
+  <%= form.text_field :price %>
+
+  <%= form.label :image %>
+  <%= form.text_field :image %>
+
+  <%= form.label :inventory %>
+  <%= form.text_field :inventory %>
+
+  <%= form.submit 'Create Item' %>
+<% end %>

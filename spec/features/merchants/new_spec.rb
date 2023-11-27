@@ -13,10 +13,10 @@ RSpec.describe "New Merchant Page" do
         state = "CO"
         zip = 80204
 
-        fill_in :name, with: name
-        fill_in :city, with: city
-        fill_in :state, with: state
-        fill_in :zip, with: zip
+        fill_in :merchant_name, with: name
+        fill_in :merchant_city, with: city
+        fill_in :merchant_state, with: state
+        fill_in :merchant_zip, with: zip
 
         click_button 'Create Merchant'
 

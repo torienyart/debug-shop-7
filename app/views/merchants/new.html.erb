@@ -1,6 +1,6 @@
 <%= link_to "Items", '/items' %>
 <%= link_to "Merchants", '/merchants' %>
-<%= form_with url: '/merchants' do |form| %>
+<%= form_for @merchant, url: '/merchants', method: :create do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %>
 

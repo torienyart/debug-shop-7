@@ -1,6 +1,7 @@
 class MerchantsController < ApplicationController
 
   def new
+    @merchant = Merchant.new
   end
 
   def create

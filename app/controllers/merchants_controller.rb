@@ -9,7 +9,7 @@ class MerchantsController < ApplicationController
   end
 
   def edit
-    @merchant = Merchant.find(params[:id])
+    @merchant = Merchant.find(params[:merchant_id])
   end
 
   def index

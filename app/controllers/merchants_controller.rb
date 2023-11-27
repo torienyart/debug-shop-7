@@ -13,6 +13,7 @@ class MerchantsController < ApplicationController
   end
 
   def index
+    @merchants = Merchant.all
   end
 
   def show

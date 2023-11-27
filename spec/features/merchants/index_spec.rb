@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.describe 'merchant index page', type: :feature do
   describe 'As a user' do
     before :each do
